@@ -1,16 +1,35 @@
-# meetings
+# Meetings
 
-A new Flutter project.
+A Flutter App to schedule/manage personal meetings.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+For help getting started with Flutter, view our online
+[documentation](https://flutter.dev/).
 
-A few resources to get you started if this is your first Flutter project:
+## Todo
+* ...
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Done this version
+* ...
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Building
+### Apk
+A precomplied apk can be found at `apk/meetings-app.apk`
+
+To build the:
+```console
+flutter build apk
+```
+
+**VSCode:** Go to the debug tab (ctrl + shift + D) and select on top the debug configuration and there will be 1 available options: `Flutter`.
+These configurations will build the app with the commands given above.
+
+### App bundles (preferred)
+To build:
+```console
+flutter build appbundle
+```
+
+## Developping
+Don't hesitate to fork this repository and if you are having any questions please contact me.

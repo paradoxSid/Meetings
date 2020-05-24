@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 color: Colors.white10,
                 textColor: Colors.white,
                 padding: const EdgeInsets.all(10),
-                child: Icon(Icons.close),
+                child: Icon(Icons.home),
                 onPressed: () {},
               ),
               GestureDetector(
@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Padding(
               padding: const EdgeInsets.only(left: 25, top: 5, bottom: 15),
               child: Text(
-                newUser ? Strings.register : Strings.loginPage,
+                newUser ? Strings.register : Strings.login,
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 22,
@@ -203,8 +203,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             isLoading = false;
             isExpanded = true;
           });
-        else
+        else {
+          setState(() => isLoading = false);
           MessageHelper.showErrorSnackbar(context, 'Something wrong happened');
+        }
       });
     }
 
