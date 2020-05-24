@@ -132,8 +132,10 @@ class MeetingsBloc extends BlocBase {
 
     var newMeeting =
         await _meetingService.createMeeting(http.Client(), meeting, token);
-    if (_latestMeetings.isEmpty)
-      _latestMeetings.add(newMeeting);
+    var index = _latestMeetings.indexWhere(
+        (meet) => meet.startDatetime.isBefore(newMeeting.startDatetime));
+    if (index == -1)
+      _latestMeetings.insert(0, newMeeting);
     else
       _latestMeetings.insert(
         _latestMeetings.indexWhere(
